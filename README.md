@@ -10,4 +10,5 @@ $file = Get-Content C:\temp\MY_PRIVATE_KEY.pem
 heroku config:add CLOUDFRONT_KEY="$($file)"
 heroku config:add CLOUDFRONT_KEY_PAIRID='MY_CLOUDFRONT_KEY_PAIR_ID'
 heroku config:add CLOUDFRONT_BASE_URL='MY_CLOUDFRONT_URL.cloudfront.net'
+heroku config:set S3_BASE_URL='s3-us-west-2.amazonaws.com/MY_BUCKET_NAME'
 ```

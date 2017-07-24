@@ -43,11 +43,14 @@ function getSignedURL($resource, $timeout)
 }
 
 $imageURL = 'http://' . getenv('CLOUDFRONT_BASE_URL') . '/image.jpg';
+$s3URL = 'https://' . getenv('S3_BASE_URL') . '/image.jpg';
 $url = getSignedURL($imageURL, 60);
 
 echo "<h1>SIGNED URL</h1>";
 echo "<img src='" . $url . "' />";
 echo "<h1>UNSIGNED URL</h1>";
 echo "<img src='" . $imageURL . "' />";
+echo "<h1>S3 URL</h1>";
+echo "<img src='" . $s3URL . "' />";
 
 ?>
