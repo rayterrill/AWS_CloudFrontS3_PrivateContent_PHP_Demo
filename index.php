@@ -5,7 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 function getSignedURL($resource, $timeout)
 {
 	//This comes from key pair you generated for cloudfront
-	$keyPairId = getenv('CLOUDFRONT_KEY_PAIR');
+	$keyPairId = getenv('CLOUDFRONT_KEY_PAIRID');
 
 	$expires = time() + $timeout; //Time out in seconds
 	$json = '{"Statement":[{"Resource":"'.$resource.'","Condition":{"DateLessThan":{"AWS:EpochTime":'.$expires.'}}}]}';		
